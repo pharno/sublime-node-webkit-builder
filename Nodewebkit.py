@@ -39,7 +39,7 @@ class Nodewebkit(sublime_plugin.TextCommand):
         compile project and run with node-webkit
         """
         # Find folder where current file
-        folder, fileName = self.view.file_name().rsplit('/', 1)
+        folder, fileName = self.view.file_name().rsplit(os.sep, 1)
 
         # Load plugin settings
         self.settings = sublime.load_settings('node-webkit.sublime-settings')
